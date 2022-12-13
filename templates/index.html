@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>translator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+   <style>
+    body{
+      background-color: lightslategray;
+      
+    }
+   
+    h1{
+            text-align: center;
+            color: white;
+
+    }
+     
+
+      .scroll2{
+        text-align: center;
+        margin-top: 30px;
+        
+      }
+
+      .box{
+        width: 600px;
+        height: 400px;
+        border: 3px solid black;
+        border-radius: 6px;
+        overflow:scroll;
+        margin-left: 30%;
+        background-color: white;
+
+        
+      }
+     
+
+
+
+   </style>  
+</head>
+  <body>
+    <h1>TRANSLATOR</h1>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <form action="/translate" method="post">
+        
+ 
+            <div class="scroll2">
+    <input id="searchbar" list="heroes"  type="text"
+name="to_lang" placeholder="Select Language" style="border-radius: 6px;
+font-size: 20px;
+max-width: 200px; height: 55px;">
+<datalist id="heroes">
+</datalist></div>
+
+
+
+<div class="scroll2">
+<textarea  name="text" rows="4" cols="50" placeholder="Enter your text" style="border-radius: 6px;">
+</textarea>
+<br>
+<input type="submit" value="Translate" style="margin-top: 20px;"></div><br>
+<div class="box">
+<h6>{{result}}</h6></div>
+    </form>
+    
+    <script>
+      var heroes = [
+      'afrikaans',
+ 'albanian',
+ 'amharic',
+ 'arabic',
+ 'armenian',
+ 'azerbaijani',
+ 'basque',
+ 'belarusian',
+ 'bengali',
+ 'bosnian',
+ 'bulgarian',
+ 'catalan',
+ 'cebuano',
+ 'chichewa',
+ 'chinese (simplified)',
+ 'chinese (traditional)',
+ 'corsican',
+ 'croatian',
+ 'czech',
+ 'danish',
+ 'dutch',
+ 'english',
+ 'esperanto',
+ 'estonian',
+ 'filipino',
+ 'finnish',
+ 'french',
+ 'frisian',
+ 'galician',
+ 'georgian',
+ 'german',
+ 'greek',
+ 'gujarati',
+ 'haitian creole',
+ 'hausa',
+ 'hawaiian',
+ 'hebrew',
+ 'hebrew',
+ 'hindi',
+ 'hmong',
+ 'hungarian',
+ 'icelandic',
+ 'igbo',
+ 'indonesian',
+ 'irish',
+ 'italian',
+ 'japanese',
+ 'javanese',
+ 'kannada',
+ 'kazakh',
+ 'khmer',
+ 'korean',
+ 'kurdish (kurmanji)',
+ 'kyrgyz',
+ 'lao',
+ 'latin',
+ 'latvian',
+ 'lithuanian',
+ 'luxembourgish',
+ 'macedonian',
+ 'malagasy',
+ 'malay',
+ 'malayalam',
+ 'maltese',
+ 'maori',
+ 'marathi',
+ 'mongolian',
+ 'myanmar (burmese)',
+ 'nepali',
+ 'norwegian',
+ 'odia',
+ 'pashto',
+ 'persian',
+ 'polish',
+ 'portuguese',
+ 'punjabi',
+ 'romanian',
+ 'russian',
+ 'samoan',
+ 'scots gaelic',
+ 'serbian',
+ 'sesotho',
+ 'shona',
+ 'sindhi',
+ 'sinhala',
+ 'slovak',
+ 'slovenian',
+ 'somali',
+ 'spanish',
+ 'sundanese',
+ 'swahili',
+ 'swedish',
+ 'tajik',
+ 'tamil',
+ 'telugu',
+ 'thai',
+ 'turkish',
+ 'ukrainian',
+ 'urdu',
+ 'uyghur',
+ 'uzbek',
+ 'vietnamese',
+ 'welsh',
+ 'xhosa',
+ 'yiddish',
+ 'yoruba',
+ 'zulu'
+      ];
+    
+      for (var key in heroes) {
+        var optionElement = document.createElement("option");
+        optionElement.value = heroes[key];
+        document.getElementById("heroes").appendChild(optionElement);
+      }
+    </script>
+
+  </body>
+</html>
